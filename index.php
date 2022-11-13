@@ -195,7 +195,9 @@
                 errorEmail = false;
 
             const validChars = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-            const intRegex = /^\d+$/;
+            // const intRegex = /^\d+$/;
+            const intRegex = /^[0-9-+]+$/;
+
             const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
             // //debugger;
             if(first == ""){
@@ -263,6 +265,15 @@
                     errorEmail = true;
                 }
             });
+
+            if(phone == "" || intRegex.test(phone) == false){
+                $('#phone').addClass('danger');
+                errorText++;
+            }else{
+                $('#phone').removeClass('danger');
+                //errorText--;
+            }
+
             if(errorText > 0){
                 //console.log('ssss', errorText);
                 return false;
