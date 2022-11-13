@@ -245,35 +245,35 @@
             //         }
 
 
-            // $('input[type="text"]').blur(function(){
-            //     if($(this).val() == ""){
-            //         $(this).addClass('danger');
-            //         errorText++;
-            //     }else{
-            //         $(this).removeClass('danger');
-            //     }
-            // });
+            $('input[type="text"]').blur(function(){
+                if($(this).val() == ""){
+                    $(this).addClass('danger');
+                    errorText++;
+                }else{
+                    $(this).removeClass('danger');
+                }
+            });
 
-            // $('input[type="email"]').blur(function(){
-            //     if($(this).val() == ""){
-            //         $(this).addClass('danger');
-            //         errorEmail = false;
-            //     }else{
-            //         $(this).removeClass('danger');
-            //         errorEmail = true;
-            //     }
-            // });
-            // if(errorText > 0){
-            //     //console.log('ssss', errorText);
-            //     return false;
-            // }
+            $('input[type="email"]').blur(function(){
+                if($(this).val() == ""){
+                    $(this).addClass('danger');
+                    errorEmail = false;
+                }else{
+                    $(this).removeClass('danger');
+                    errorEmail = true;
+                }
+            });
+            if(errorText > 0){
+                //console.log('ssss', errorText);
+                return false;
+            }
 
-            // $('input[type="text"]').each(function(){
-            //     if($(this).val() == ""){
-            //         $(this).addClass('danger');
-            //         return false;
-            //     }
-            // });
+            $('input[type="text"]').each(function(){
+                if($(this).val() == ""){
+                    $(this).addClass('danger');
+                    return false;
+                }
+            });
 
 
 
